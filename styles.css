@@ -1,0 +1,120 @@
+.container {
+    display: grid;
+
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 45pt 55pt 180pt 180pt 25pt 45pt;
+
+    grid-template-areas:
+      "header header header"
+      "nav nav aside"
+      "main main aside"
+      "main main aside"
+      "... banner ..."
+      "footer footer footer"
+  }
+
+header {
+    /* give each element some color to see more easily */
+    background-color: bisque;
+    /* notice this property on each rule, though, we'll use it when we're laying out the Parent Element's grid-template-area */
+    grid-area: header;
+  }
+  main {
+    background-color: cadetblue;
+    grid-area: main;
+  }
+  nav {
+    background-color: coral;
+    grid-area: nav;
+  }
+  aside {
+    background-color: crimson;
+    grid-area: aside;
+  }
+  .banner {
+    background-color: darkkhaki;
+    grid-area: banner;
+  }
+  footer {
+    background-color: darkslategrey;
+    grid-area: footer;
+  }
+
+    /* Extra Small and up (Portrait Phones) */
+    @media (min-width: 575px) {
+
+    }
+  /* Small and up (Landscape Phones) */
+  @media (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 45pt 55pt 180pt 180pt 25pt 45pt;
+    
+        grid-template-areas:
+          "header header..."
+          "...banner banner"
+          "... main ..."
+          "... main ..."
+          "... aside ..."
+          "... footer ..."
+          "... nav ..."
+      }
+}
+
+/* Medium and up (Tablets) */
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 45pt 55pt 180pt 180pt 25pt 45pt;
+    
+        grid-template-areas:
+          "... header ..."
+          "...aside..."
+          "... main ..."
+          "... main ..."
+          "... banner ..."
+          "... footer ..."
+          "... nav ..."
+      }
+}
+
+/* Large and up (Desktops) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra Large and up (Wide Screen Desktops) */
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+    
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 45pt 55pt 180pt 180pt 25pt 45pt;
+    
+        grid-template-areas:
+          "header header header"
+          "nav nav aside"
+          "main main aside"
+          "main main aside"
+          "... banner ..."
+          "footer footer footer"
+      }
+
+      @media (min-width: 1300px) {
+        .container {
+            display: grid;
+        
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 45pt 55pt 180pt 180pt 25pt 45pt;
+        
+            grid-template-areas:
+            "header header header"
+            "nav nav  aside"
+            "main main main"
+            "main main main"
+            "banner ... ..."
+            "footer footer footer"
+        }
+    }
